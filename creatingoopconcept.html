@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oops concept</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // Constructor function
+     function car_detail(name , year, make){
+        //this method
+        this.name = name;
+        this.year = year;
+        this.make = make;        
+     }
+     //new keyword
+     const car1 = new car_detail("Mercedes-Benz E-Class " , 2023 , "Mercedes-Benz");
+     car1.type="Luxury sedan";
+     console.log("Car's Name : " ,car1.name);
+     console.log("Year : " ,car1.year);
+     console.log("Make : " ,car1.make);
+     console.log("Type : " ,car1.type);
+   //   console.log(car1);
+
+     // object accessors method 
+     let car2 = {
+        name : "Tesla Model 3 ",
+        year : 2023,
+        make : "Tesla",
+        Type : "Electric sedan",
+        // Using set keyword in object
+        set update_year(value){this.year = value;}
+     }
+     //update year 
+     car2.update_year = 2022;
+     //before added
+     console.log(car2);
+     //added property
+     car2.Features = "Long electric range, quick acceleration, advanced autopilot capabilities, minimalist interior design, and frequent software updates";
+     console.log(car2); 
+  </script>
+</body>
+</html>
